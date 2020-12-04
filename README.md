@@ -44,24 +44,35 @@ $default-grid-gutter: 2%;
 
 ```
 .grid {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -1%;
+  margin-left: -1%;
+  margin-right: -1%;
 }
 
 .grid > .grid__col-3 {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-flex: 0;
   -ms-flex: 0 0 23%;
   flex: 0 0 23%;
-  margin: 0 1% 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
 }
 
 .grid > .grid__col-9 {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-flex: 0;
   -ms-flex: 0 0 73%;
   flex: 0 0 73%;
-  margin: 0 1% 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
 }
 ```
 
@@ -77,12 +88,6 @@ $ npm install flexbox-grid-mixins --save-dev
 
 ```
 $ yarn add flexbox-grid-mixins --dev
-```
-
-### Bower (deprecated)
-
-```
-$ bower install flexbox-grid-mixins --save
 ```
 
 ### Manual Install
@@ -126,22 +131,28 @@ Example : import form node_modules
 
 See Flexbox Grid Mixins documentation: [http://thingsym.github.io/flexbox-grid-mixins/](http://thingsym.github.io/flexbox-grid-mixins/)
 
-## Package manager
+## Mixins Reference
 
-[flexbox-grid-mixins - npm](https://www.npmjs.com/package/flexbox-grid-mixins)
+[Mixins Reference](http://thingsym.github.io/flexbox-grid-mixins/#Mixins-Reference)
 
-### Mixins Reference and Example
+## Example
 
-* [Mixins Reference](http://thingsym.github.io/flexbox-grid-mixins/#Mixins-Reference)
 * [Basic Example](http://thingsym.github.io/flexbox-grid-mixins/#Basic-Example)
 * [Grid System Example](http://thingsym.github.io/flexbox-grid-mixins/#Grid-System-Example)
 * [Flexbox Grid Mixins Example](http://thingsym.github.io/flexbox-grid-mixins/example/example.html)
 * [Holy Grail Layout - Using Flexbox Grid Mixins](http://thingsym.github.io/flexbox-grid-mixins/example/holy-grail-layout.html)
 * [Responsive web design - Using Flexbox Grid Mixins](http://thingsym.github.io/flexbox-grid-mixins/example/responsive.html)
 * [Unit-Set Grid (Experimental stage)](http://thingsym.github.io/flexbox-grid-mixins/example/unit-set.html)
+* [Box Sizing using Variable Defaults](http://thingsym.github.io/flexbox-grid-mixins/example/box-sizing.html)
+* [Stack](http://thingsym.github.io/flexbox-grid-mixins/example/stack.html)
 * [Grid Type](http://thingsym.github.io/flexbox-grid-mixins/example/grid-type.html)
+* [Testing Stick Out Grid](http://thingsym.github.io/flexbox-grid-mixins/example/test-stick-out.html)
 
-### Development
+## Package manager
+
+[flexbox-grid-mixins - npm](https://www.npmjs.com/package/flexbox-grid-mixins)
+
+## Development
 
 1. run ```$ sudo yum install nodejs npm```
 2. run ```$ sudo npm install --global gulp-cli```
@@ -166,6 +177,21 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.2.2
+  * remove .travis.yml, change CI/CD to GitHub Actions
+* Version 0.2.1
+  * auto release to npm only version tags
+  * gulp bump up version to 4.0
+* Version 0.2.0
+  * update example
+  * update package.json
+  * add Variable Defaults flexbox-grid-mixins-stack
+  * change margin property, remove @mixin, grid-margin and grid-col-margin
+  * remove breakpoint value of col argument
+  * remove condensed argument
+  * change grid-type from argument to Variable Defaults flexbox-grid-mixins-grid-type
+  * remove bower.json
+  * add .travis.yml
 * Version 0.1.6
   * add Variable Defaults $flexbox-grid-mixins-box-sizing
   * update package.json
@@ -205,4 +231,4 @@ Licensed under the MIT License.
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2016 thingsym
+Copyright (c) 2016-2020 thingsym
